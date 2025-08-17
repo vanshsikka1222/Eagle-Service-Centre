@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+
+/* Disable dark mode media strategy */
+@custom-variant dark media(false);
+
+
+@theme {
+  --font-geist: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+}
+
+
+
+@layer utilities {
+  @media (width: 1024px) and (min-height: 1300px) and (orientation: portrait) {
+    .force-tablet-pro {
+      display: none;
+    }
+
+    .force-tablet-hamburger {
+      display: flex;
+    }
+
+    .force-tablet-pro-faq-width{
+      width: 25%;
+    }
+  }
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-target {
+  scroll-margin-top: 100px; /* Adjust this based on your sticky header height */
+}
+
+img {
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
+} 
+
+.reveal-word {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
