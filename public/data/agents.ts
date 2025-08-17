@@ -81,6 +81,9 @@ const agents:AgentType[] = [
     {
       imageUrl: "/brand25.svg",
     },
+    {
+      imageUrl: "/brand26.svg",
+    },
   ];
 
 
